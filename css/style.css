@@ -214,18 +214,14 @@ body {
 			}
 			.menu_item {
 				display: flex;
+				margin-right: 96px;
+				width: 100%;
 				align-items: center;
 				height: 42px;
 				border-bottom: 1px solid #dab159;
-				/* border-bottom: 1px solid red; */
+				border: 1px solid red;
 				text-transform: uppercase;
 				color: red;
-			}
-			.menu_item > p {
-				padding: 0 96px 0 0px;
-				/* border: 1px solid green; */
-				margin-bottom: 1px;
-				/* color: red; */
 			}
 
 	.front_page {
