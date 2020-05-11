@@ -139,7 +139,7 @@ body {
 			.hamburgerMenu {
 				padding: 16px 2px 16px 12px;
 				cursor: pointer;
-				/* border: 1px solid white; */
+				border: 1px solid white;
 			}
 			#menu_toggle {
 				position: absolute;
@@ -153,38 +153,44 @@ body {
 				position: relative;
 				width: 20px;
 				height: 14px;
-				z-index: 1;
+				z-index: 10;
 			}
-			#menu_toggle ~ .menu_btn > .bar1,
-			#menu_toggle ~ .menu_btn > .bar2,
-			#menu_toggle ~ .menu_btn > .bar3 {
+			.bar1,
+			.bar2,
+			.bar3 {
 				display: block;
 				position: absolute;
 				width: 100%;
 				height: 2px;
 				background-color: white;
 			}
-			#menu_toggle ~ .menu_btn > .bar1 {
+			.bar1 {
 				top: 0;
 				transition: top .375s, transform .375s;
 			}
-			#menu_toggle ~ .menu_btn > .bar2 {
+			.bar2 {
 				left: 0;
 				transition: left .225s, width .3s;
 			}
-			#menu_toggle ~ .menu_btn > .bar3 {
+			.bar3 {
 				bottom: 0;
 				transition: bottom .375s, transform .375s;
 			}
-			#menu_toggle:checked ~ .menu_btn > .bar1 {
+			#menu_toggle:checked 
+			~ .hamburgerMenu 
+			.bar1 {
 				top: 6px;
 				transform: rotate(135deg);
 			}
-			#menu_toggle:checked ~ .menu_btn > .bar2 {
+			#menu_toggle:checked
+			~ .hamburgerMenu
+			.bar2 {
 				left: 7px;
 				width: 0;
 			}
-			#menu_toggle:checked ~ .menu_btn > .bar3 {
+			#menu_toggle:checked
+			~ .hamburgerMenu
+			.bar3 {
 				bottom: 6px;
 				transform: rotate(-135deg);
 			}
@@ -200,6 +206,7 @@ body {
 				transition: top .5s, padding-top .5s;
 				cursor: default;
 				/* border: 1px solid red; */
+				z-index: 1;
 			}
 			#menu_toggle:checked ~ .menu_box {
 				top: 0;
