@@ -205,7 +205,6 @@ body {
 				background: linear-gradient(135deg,#171c33,#525f83 42%,#848896 63%,#bb9d78 78%,#f6e183);
 				transition: top .5s, padding-top .5s;
 				cursor: default;
-				/* border: 1px solid red; */
 				z-index: 1;
 			}
 			#menu_toggle:checked ~ .menu_box {
