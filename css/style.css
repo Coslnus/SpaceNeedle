@@ -50,7 +50,7 @@ html {
 .cover {
 	position: absolute;
 	top: 100vh;
-	opacity: 1;
+	opacity: .5;
 }
 .cover2 {
 	position: absolute;
@@ -105,6 +105,7 @@ body {
 	header {
 		position: absolute;
 		display: flex;
+		align-items: center;
 		padding: 20px 32px;
 		width: 100%;
 		/* border: 1px solid red; */
@@ -129,17 +130,28 @@ body {
 		}
 			.header_nav a {
 				flex-direction: row;
-				padding: 12px 12px 0 12px;
+				padding: 12px 10px 0 12px;
 				text-transform: uppercase;
 				text-decoration: none;
-				color: white;
+				color: #eee;
 				font: 1.1rem/40px GothamLight;
 				/* border: 1px solid red; */
 			}
-			.hamburgerMenu {
-				padding: 16px 2px 16px 12px;
+			.hamburgerBtn {
+				display: flex;
+				position: relative;
+				padding-left: 16px;
+				justify-content: center;
+				/* border: 1px solid red; */
+			}
+			.hamburgerLabel {
+				position: absolute;
+				top: -10px;
+				left: 0;
+				padding: 16px 16px 16px 20px;
 				cursor: pointer;
-				border: 1px solid white;
+				z-index: 10;
+				/* border: 1px solid white; */
 			}
 			#menu_toggle {
 				position: absolute;
@@ -153,7 +165,7 @@ body {
 				position: relative;
 				width: 20px;
 				height: 14px;
-				z-index: 10;
+				z-index: 4;
 			}
 			.bar1,
 			.bar2,
@@ -177,19 +189,19 @@ body {
 				transition: bottom .375s, transform .375s;
 			}
 			#menu_toggle:checked 
-			~ .hamburgerMenu 
+			~ .menu_btn 
 			.bar1 {
 				top: 6px;
 				transform: rotate(135deg);
 			}
 			#menu_toggle:checked
-			~ .hamburgerMenu
+			~ .menu_btn
 			.bar2 {
 				left: 7px;
 				width: 0;
 			}
 			#menu_toggle:checked
-			~ .hamburgerMenu
+			~ .menu_btn
 			.bar3 {
 				bottom: 6px;
 				transform: rotate(-135deg);
