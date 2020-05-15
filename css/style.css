@@ -236,8 +236,11 @@ body {
 		background: url(../images/HomePage-Desktop.jpg) no-repeat;
 		background-position: center;
 		background-size: cover;
+<<<<<<< HEAD
 		/* git reset test */
 		/* git reset double */
+=======
+>>>>>>> parent of 235fe41... Revert "Revert action"
 	}
 		.caution {
 			margin-top: 80px;
