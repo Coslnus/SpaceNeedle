@@ -236,6 +236,7 @@ body {
 		background: url(../images/HomePage-Desktop.jpg) no-repeat;
 		background-position: center;
 		background-size: cover;
+		/* 1 */
 	}
 		.caution {
 			margin-top: 80px;
