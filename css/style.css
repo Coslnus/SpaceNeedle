@@ -90,7 +90,7 @@ Button common style
 /* --------------
 Galery title elem
    -------------- */
-.galery_h1 {
+.galery_h2 {
 	font: 4.8rem Knockout;
 	text-transform: uppercase;
 	letter-spacing: .18rem;
@@ -366,20 +366,19 @@ body {
 			flex-flow: row wrap;
 			width: 100%;
 		}
-			.photo_item {
-				position: relative;
+			.galery-item {
 				height: 200px;
-				background-position: center;
-				background-size: cover;
 				flex-basis: 15%;
 				flex-grow: 1;
+				border: 1px solid green;
+				overflow: hidden;
 			}
-			/* .photo_item.vertical:hover {
-				background-size: 105%;
-			}
-			.photo_item.horizontal:hover {
-				background-size: 140%;
-			} */
+				.galery-item__photo {
+					object-fit: cover;
+					-o-object-fit: cover;
+					width: 100%;
+					height: inherit;
+				}
 			.photo_item:hover > .igLogin_wrap > .ig_login {
 				opacity: 1;
 			}
