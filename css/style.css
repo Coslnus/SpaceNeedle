@@ -367,10 +367,10 @@ body {
 			width: 100%;
 		}
 			.galery-item {
+				position: relative;
 				height: 200px;
 				flex-basis: 15%;
 				flex-grow: 1;
-				border: 1px solid green;
 				overflow: hidden;
 			}
 				.galery-item__photo {
@@ -378,7 +378,59 @@ body {
 					-o-object-fit: cover;
 					width: 100%;
 					height: inherit;
+					-webkit-transition: transform .2s;
+					-moz-transition: transform .2s;
+					-o-transition: transform .2s;
+					-ms-transition: transform .2s;
+					transition: transform .2s;
 				}
+				.galery-item__link {
+					position: absolute;
+					left: 0;
+					right: 0;
+					top: 0;
+					bottom: 0;
+					z-index: 10;
+					-webkit-transition: background-color .2s;
+					-moz-transition: background-color .2s;
+					-o-transition: background-color .2s;
+					-ms-transition: background-color .2s;
+					transition: background-color .2s;
+				}
+				.galery-item__link:hover {
+					background-color: rgba(0, 0, 0, 0.5);
+				}
+				.galery-item__link:hover ~ .galery-item__photo {
+					transform: scale(1.1, 1.1);
+				}
+				.galery-item__link:hover ~ .galery-item__ig-login {
+					opacity: 1;
+				}
+				.galery-item::after {
+					content: "";
+					position: absolute;
+					left: 4px;
+					bottom: 4px;
+					height: 14px;
+					width: 14px;
+					background: url(../images/IGlogo.png) center no-repeat;
+					background-size: cover;
+					z-index: 10;
+				}
+				.galery-item__ig-login {
+					position: absolute;
+					left: 22px;
+					bottom: 4px;
+					font: 12px Helvetica;
+					opacity: 0;
+					z-index: 10;
+					-webkit-transition: opacity .2s;
+					-moz-transition: opacity .2s;
+					-o-transition: opacity .2s;
+					-ms-transition: opacity .2s;
+					transition: opacity .2s;
+				}
+
 			.photo_item:hover > .igLogin_wrap > .ig_login {
 				opacity: 1;
 			}
